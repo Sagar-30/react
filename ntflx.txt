@@ -1,0 +1,160 @@
+1. index.html--------
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>React Vite Playground</title>
+	</head>
+	<body>
+		<div id="root"></div>
+        <div id="home"></div>
+		<script type="module" src="/src/main.jsx"></script>
+	</body>
+</html>
+
+
+
+2. main.jsx ---------
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import Navbar from './components/headercomponent.jsx'
+import './index.css'
+import Main from './components/mainpagecomponent.jsx'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Navbar />
+  </React.StrictMode>
+)
+ReactDOM.createRoot(document.getElementById('home')).render(
+    <React.StrictMode>
+        <Main />
+        </React.StrictMode>
+)
+
+
+3. headercomponent.jsx------
+
+import './headercomponent.css'
+
+export default function Navbar(){
+    return(
+      
+<section className='top-navbar'>
+<img className="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMsAAABzCAMAAAABvAYZAAAAbFBMVEUAAADjCRTnCRQ3AgXWCBPqCRTvCRXcCRPNCBKqBw+QBgy+CBFUAwdyBApYBAgEAAEaAQKWBg1iBAkyAgRQAwciAQO2BxChBg4/AgXGCBEmAQM7AwUTAAJFAwaABQt4BAotAgRpBAmIBQz6ChYfXJd0AAAEJElEQVR4nO2ZybajIBBAlYgYp0wOMaPa//+PDVU4YJKX5Em76FN3E8QoXi2gRMchCIIgCIIgCIIgCIIgCIIgCIIgCIIgiC+4rCTnzWhjVUP5sDK5yLrzpG51kAduJ7Xq8BzOejGbOvcnvxzhn90O2DhvZ7vEnsRNcCML5IYooVx5JkdZJyZ1XpQ7TmPWikIqtKrOzcymBOxVt+0Ahwhdn8FxwXW2S8okPNBnFWpjDeWAmSgXf1LHAumSmLVcXW3IZcmPzaZUHY+Uy6aA/TesL2FHMVvFSV3gql1ksXdxx6CLa6JdzDp0kaWpizohAxfnDuUKqg9CbfiTh/h7FxYu65J7cPZUlVsOZ5qv0rlU+XOXIXSGGNPXDLHZuwx/jD5wkXGlWoKeCY+FN9ZcXH596iKqqEONOrgFBwgorjsX1v+xKj9xWeHDlKUEqoPaokv5zIUFzwZKAZHUb4LL5LrfujgRdJLEuUBBx7gdFyaeuxxeuUS9Jbrsv3Rpccu5YijnFl1clizrsvIgUq/roeNYcwGDBV2cArr8Dhuf/HOmC/POy7ocofdz1+x8Vlxcv1nWxfH6CYzdLbuoWfjR5fTvXG68Dwk7KoOLGkse5hevvSna5J0Liwok/djlKrqIaO27hC/nfV69c+nmfZ587IK9X00HtVUX3cyrfEzOA+9cxkP7hy4pHsjsDMidC8PJN17WBTMxV1jIkEcuvFSDCg+vy7qU1jLkscuuhEzy/Oiic9/3LgJpvnBBfbFyLIEuYQI/iTcdx253wMjIX4zJG+Rzl7vuL7aGse656AucuPzT+WVT6ScfTdY4ZrtAjgcnX2reb7oOaeP12HDJ+h68lEvRuVjKkgeXbZ8eLeRSD8OfsBRknQsOkAu6YHuYXNwsu+yXjTH9LrZmFnt/79JPjoZLPcdlshJpuNxwycLBB3O07BLyJy77/b65t7t1UZ2/dnF9n7leUBXr8vzg4um1C1xc2ll2OfgPLjII5KTv+1wy3LqPXVy9isb/NFOXtFtTSmEuEI4NBhdHz10/rFt+74Lg3rELtMVDx9liWmu8IFlw0RewhEsM1ZAhh1Bt5Y1/5JKJ1y5s5OJylW0OLkymlGziAmHJ9QvaowtmyNDQCbXmf7EwXHSQDS4Q67K7+Fz24aHv31TCue+H0TrOsiw1F+viNgx35boooirwXIb9xefdN4st3DUfbw8uLtlIMMcuN189AB9dKqGGoHJ3a+JjXZ/yzU9necXmst3mp/oA4mVRBfgtKQQt/eICw4CV3j922fzxmQginIUtfHN7BljBIC90f88hmnk6/9zwXczX43t8XR1yWxn4z1zyumtoJ6OZ2/guFss4Cu925t1fss2atiyK+ddwOf2qI9jntEw8EARBEARBEARBEARBEARBEARBEARBEP8NfwEwsEUiRl5BjwAAAABJRU5ErkJggg=="></img>
+
+<div className="right-div"> 
+    <select className='navbar-dropdown'>
+    <option>English</option>
+    <option>Hindi</option>
+    </select>
+    <a className="Sign-in"><p>Sign IN</p></a> 
+</div>
+</section>
+)
+};
+
+4.headercomponent.css-------
+.top-navbar{
+display:flex;
+justify-content:space-around;
+align-items:center;
+gap:20vw;
+}
+.logo{
+    height:auto;
+    width:10rem;
+}
+.navbar-dropdown{
+    padding:.13rem;
+    color:white;
+    background-color:black;
+    border-radius:7px;
+}
+.Sign-in{
+    color:white;
+    background-color:;
+}
+                 /* ////////////////////// */
+.right-div{
+    display:flex;
+    justify-content:space-between;
+    gap:3rem;
+}
+.right-div p{
+    background-color:red;
+    padding:.5rem .8rem;
+    border-radius:7px;
+}
+.right-div p:hover{
+    background-color:#990012;
+}
+
+5. mainpagecomponent.jsx -----
+
+import './mainpagecomponent.css';
+
+export default function Main(){
+    return(
+        <section className="Main-home">
+        <h1>Unlimited movies, TV shows and more</h1>
+        <p>Watch anywhere. Cancel anytime.</p>
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        <div className="Search-panel">
+        <input className="main-input-box" type="email" placeholder='Email address'></input>
+        <button type="Submit">Get Started</button>
+        </div>
+        </section>
+    )
+}
+6.mainpagecomponent.css ------
+.Main-home{
+    color:White;
+    padding-top:28vh;
+    text-align:center;
+}
+.Main-home h1{
+    font-size:3rem;
+    padding:2vh;
+}
+.Main-home p{
+  font-size:1.1rem;
+  padding:18px;
+}
+.main-input-box{
+padding:1rem 10rem 1rem .5rem;
+margin:0 1rem;
+}
+.Main-home button{
+    padding:.6rem 1.3rem;
+    background-color:red;
+    border-radius:7px;
+    color:white;
+    font-size:1.5rem;
+}
+.right-div p:hover{
+    background-color:#990012;
+}
+.Search-panel{
+display:flex;
+justify-content:Center;
+align-items:center;
+margin:1rem;
+}
+
+
+
+
+
+7. index.css ---------- 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color: black;
+    
+}
