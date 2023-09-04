@@ -1,0 +1,41 @@
+.top-navbar{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    gap:20vw;
+    padding-top:2rem;
+    }
+    .logo{
+        height:auto;
+        width:13rem;
+    }
+    .navbar-dropdown{
+        padding:1rem;
+        font-size: 1.3rem;
+        color:white;
+        background-color:black;
+        border-radius:7px;  
+    }
+    .Sign-in{
+        color:white;
+        font-size: 1.3rem;
+        align-self: center;
+        /* background-color:; */
+    }
+    .right-div{
+        display:flex;
+        justify-content:space-between;
+        gap:3rem;
+    }
+    .right-div p{
+        background-color:red;
+        padding:.8rem 1rem;
+        border-radius:7px;
+        font-size: 1.5rem;
+    }
+    .right-div p:hover{
+        background-color:#990012;
+    }
+    .right-div a{
+        text-decoration: none;
+        }
